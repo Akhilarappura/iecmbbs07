@@ -13,7 +13,15 @@ export default function FullWidthContainer() {
   return (
     <>
       <CssBaseline />
-      <Container maxWidth={false} disableGutters>
+      <Container
+        maxWidth={false}
+        disableGutters
+        sx={{
+          width: '100%',
+          m: 0, // remove margin
+          p: 0  // remove padding
+        }}
+      >
         <Box
           sx={{
             bgcolor: theme.palette.primary.main,
@@ -24,14 +32,15 @@ export default function FullWidthContainer() {
             flexDirection: { xs: 'column', md: 'row' },
             justifyContent: 'space-between',
             alignItems: 'center',
-            px: { xs: 3, sm: 6, md: 12 },
+            px: { xs: 2, sm: 4, md: 8 }, // reduced padding so it fits on small screens
             py: { xs: 8, md: 10 },
             textAlign: { xs: 'center', md: 'left' },
             gap: { xs: 4, md: 0 },
+            boxSizing: 'border-box' // ensures padding doesn’t break width
           }}
         >
           {/* Text Section */}
-          <Box sx={{ flex: 1, maxWidth: { xs: '100%', md: 500 }, color: 'white' }}>
+          <Box sx={{ flex: 1, minWidth: 0, color: 'white' }}>
             <h1
               style={{
                 fontSize: "clamp(1.8rem, 4vw, 2.5rem)",
@@ -67,8 +76,19 @@ export default function FullWidthContainer() {
           </Box>
 
           {/* Image Section */}
-          <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center', width: '100%' }}>
-            <Box sx={{ position: 'relative', width: '100%', maxWidth: { xs: '90%', sm: 400, md: 450 }, aspectRatio: '9/8' }}>
+          <Box sx={{
+            flex: 1,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: '100%'
+          }}>
+            <Box sx={{
+              position: 'relative',
+              width: '100%',
+              maxWidth: { xs: '100%', sm: 400, md: 450 },
+              aspectRatio: '9/8'
+            }}>
               <Image
                 src="/student.jpg"
                 alt="Student with laptop"
@@ -77,7 +97,7 @@ export default function FullWidthContainer() {
                   objectFit: "contain",
                   borderRadius: "8px"
                 }}
-                sizes="(max-width: 768px) 90vw, 450px"
+                sizes="100vw"
                 priority
               />
             </Box>
