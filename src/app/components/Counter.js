@@ -1,4 +1,4 @@
-// src/app/components/Stats.js
+
 'use client';
 
 import { useEffect, useState } from 'react';
