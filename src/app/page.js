@@ -1,7 +1,8 @@
 import Image from "next/image";
 
-import About from "./components/about"; 
+import About from "./components/About"; 
 import HeroSection from "./components/hero";
+
 
 
 export default function Home() {
@@ -12,7 +13,6 @@ export default function Home() {
         <HeroSection />
 
         <About />
-       
          <About />
           <About />
            <About />
