@@ -1,7 +1,7 @@
 // src/app/components/Stats.js
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const CounterItem = ({ end, label }) => {
   const [count, setCount] = useState(0);
@@ -23,21 +23,21 @@ const CounterItem = ({ end, label }) => {
     return () => clearInterval(timer);
   }, [end]);
 
-  return React.createElement(
-    'div',
-    { className: 'text-center w-36 sm:w-40' },
-    React.createElement('div', { className: 'text-2xl font-bold' }, `${count}+`),
-    React.createElement('div', { className: 'text-sm text-blue-200' }, label)
+  return (
+    <div className="text-center w-36 sm:w-40">
+      <div className="text-2xl font-bold">{count}+</div>
+      <div className="text-sm text-blue-200">{label}</div>
+    </div>
   );
 };
 
 export default function Stats() {
-  return React.createElement(
-    'div',
-    { className: 'mt-8 flex flex-wrap items-center justify-center gap-6 sm:gap-8' },
-    React.createElement(CounterItem, { end: 500, label: 'Partner Universities' }),
-    React.createElement(CounterItem, { end: 2500, label: 'Successful Doctors' }),
-    React.createElement(CounterItem, { end: 6500, label: 'Students' }),
-    React.createElement(CounterItem, { end: 25, label: 'Recruiting Countries' })
+  return (
+    <div className="mt-8 flex flex-wrap items-center justify-center gap-6 sm:gap-8">
+      <CounterItem end={500} label="Partner Universities" />
+      <CounterItem end={2500} label="Successful Doctors" />
+      <CounterItem end={6500} label="Students" />
+      <CounterItem end={25} label="Recruiting Countries" />
+    </div>
   );
 }
