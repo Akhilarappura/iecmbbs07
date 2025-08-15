@@ -2,7 +2,8 @@ import Image from "next/image";
 
 import About from "./components/About"; 
 import HeroSection from "./components/hero";
-import Counter from "./components/counter";
+import CounterItem from "./components/counterItem"; 
+
 
 
 
@@ -12,7 +13,8 @@ export default function Home() {
       <main >
         
         <HeroSection />
-        <Counter />
+        <CounterItem />
+      
 
         <About />
          <About />
