@@ -1,7 +1,7 @@
-"use client"; // Needed because AppBar uses useState
+"use client"; 
 
 import "./globals.css";
-import ResponsiveAppBar from "./components/appbar"; // adjust path if needed
+import ResponsiveAppBar from "./components/appbar"; 
 
 
 
@@ -9,7 +9,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <ResponsiveAppBar /> {/* AppBar at the top */}
+        <ResponsiveAppBar /> 
         <main>{children}  </main>
       </body>
     </html>
