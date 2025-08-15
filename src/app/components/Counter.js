@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -34,10 +33,10 @@ const CounterItem = ({ end, label }) => {
 export default function Stats() {
   return (
     <div className="mt-8 flex flex-wrap items-center justify-center gap-6 sm:gap-8">
-      <CounterItem end={500} label="Partner Universities" />
-      <CounterItem end={2500} label="Successful Doctors" />
+      <CounterItem end={500} label="Partner Universitiess" />
+      <CounterItem end={2500} label="Successful Doctorss" />
       <CounterItem end={6500} label="Students" />
-      <CounterItem end={25} label="Recruiting Countries" />
+      <CounterItem end={25} label="Recruiting Countriess" />
     </div>
   );
 }
