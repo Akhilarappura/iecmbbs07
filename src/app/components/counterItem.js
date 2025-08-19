@@ -25,14 +25,14 @@ const CounterItem = ({ end, label }) => {
   return (
     <div className="text-center w-36 sm:w-40">
       <div className="text-2xl font-bold">{count}+</div>
-      <div className="text-sm text-blue-200">{label}</div>
+      <div className="text-sm text-black-200">{label}</div>
     </div>
   );
 };
 
 export default function Stats() {
   return (
-    <div className="mt-8 flex flex-wrap items-center justify-center gap-6 sm:gap-8">
+    <div className=" flex flex-wrap items-center justify-center gap-6 sm:gap-8">
       <CounterItem end={500} label="Partner Universitiess" />
       <CounterItem end={2500} label="Successful Doctorss" />
       <CounterItem end={6500} label="Students" />
